@@ -66,10 +66,10 @@ add_action( 'wp_enqueue_scripts', 'gregr_load_custom_scripts', 999 );
 add_filter( 'style_loader_tag', 'gregr_ie_conditional', 10, 2 );
 
 // Remove version number from js and css
+if (!is_admin() || !is_admin_bar_showing()){
 add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
-
-
+}
 /***** STRUCTURE & REPOSITIONING *****/
 
 // Add HTML5 functions

@@ -36,7 +36,7 @@ function gregr_ie_conditional( $tag, $handle ) {
 
 // Remove version number from css and js
 function _remove_script_version( $src ){
-    if (! preg_match("/fonts.googleapis/", $src )){
+    if ( preg_match("(\?ver=)", $src )){
 	$parts = explode( '?', $src );
 	return $parts[0];
 	}else{
@@ -110,3 +110,4 @@ unset( $themes[ get_option( 'stylesheet' ) ] );
 $r['body']['themes'] = serialize( $themes );
 return $r;
 }
+?>

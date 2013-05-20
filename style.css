@@ -727,7 +727,7 @@ Plugins
 }
 
 .enews-widget .widgettitle {
-	color: #fff;
+	color: #999;
 }
 
 .enews-widget input {
@@ -1350,7 +1350,7 @@ Footer Widgets
 }
 
 .footer-widgets .widgettitle {
-	color: #fff;
+	color: #999;
 }
 
 .footer-widgets li {
@@ -1436,7 +1436,7 @@ home-bottom {
 }
 
 #home-middle .widgettitle {
-	color: #fff;
+	color: #999;
 }
 
 #home-middle li {

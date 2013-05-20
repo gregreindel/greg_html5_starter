@@ -47,6 +47,4 @@ function gregr_custom_menu_order($menu_ord) {
 
         );  
 }  
-
-
 ?>
