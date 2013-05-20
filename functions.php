@@ -53,7 +53,7 @@ remove_action( 'wp_head', 'wp_generator' );
 // Add Viewport meta tag for mobile browsers
 add_action( 'genesis_meta', 'gregr_viewport_meta_tag' );
 
-//* Add viewport meta tag for mobile browsers
+//* Add viewport meta tag for mobile browsers GENESIS 2.0 FEATURE
 //add_theme_support( 'genesis-responsive-viewport' );
 
 // Change favicon location 
