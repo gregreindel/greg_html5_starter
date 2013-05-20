@@ -862,6 +862,7 @@ Site Header
 }
 
 .header-image #title a,
+.header-image #description,
 .header-image .site-description,
 .header-image .site-title a {
 	display: block;
@@ -1554,6 +1555,7 @@ Media Queries
 	}
 
 	.genesis-nav-menu,
+	 #description
 	.site-description,
 	.site-header hgroup,
 	.site-header .search-form,
