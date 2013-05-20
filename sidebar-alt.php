@@ -5,7 +5,7 @@
  * handles the html5 sidebar tags
 */
  
-?><aside id="sidebar-alt" class="sidebar widget-area">
+?><aside id="sidebar-alt" class="sidebar sidebar-secondary widget-area" itemtype="http://schema.org/WPSideBar" itemscope="" role="complementary">
 <?php
     genesis_structural_wrap( 'sidebar-alt' );
     do_action( 'genesis_before_sidebar_alt_widget_area' );

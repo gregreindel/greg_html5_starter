@@ -53,6 +53,9 @@ remove_action( 'wp_head', 'wp_generator' );
 // Add Viewport meta tag for mobile browsers
 add_action( 'genesis_meta', 'gregr_viewport_meta_tag' );
 
+//* Add viewport meta tag for mobile browsers
+//add_theme_support( 'genesis-responsive-viewport' );
+
 // Change favicon location 
 //add_filter( 'genesis_pre_load_favicon', 'gregr_favicon_filter' );
 
@@ -184,6 +187,11 @@ genesis_register_sidebar( array(
 	'name'			=> __( 'Home Bottom', 'gregshtml5starter' ),
 	'description'	=> __( 'This is the home bottom section.', 'gregshtml5starter' ),
 ) );
+
+
+/***** OTHER *****/
+
+add_filter( 'http_request_args', 'gregr_prevent_theme_update', 5, 2 );
 
 // Below is the closing bracket of theme setup. It's kinda important. 
 } // <-- DO NOT REMOVE THIS

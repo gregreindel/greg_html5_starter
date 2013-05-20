@@ -50,14 +50,14 @@ function gregr_home_do_middle() {
 		echo '<div id="home-middle" class="clearfix"><div class="wrap">';
 		
 			genesis_widget_area( 'home-middle-1', array(
-				'before' => '<div class="home-middle-1 one-third first">',
+				'before' => '<div class="home-middle-1 widget-area">',
 			) );
 			
 			genesis_widget_area( 'home-middle-2', array(
-				'before' => '<div class="home-middle-2 one-third">',
+				'before' => '<div class="home-middle-2 widget-area">',
 			) );
 			genesis_widget_area( 'home-middle-3', array(
-				'before' => '<div class="home-middle-3 one-third">',
+				'before' => '<div class="home-middle-3 widget-area">',
 			) );									
 		
 		echo '</div><!-- end wrap --></div><!-- end home-middle -->'."\n";			
