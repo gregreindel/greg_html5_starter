@@ -20,23 +20,27 @@ function gregr_home_do_featured() {
 
 	if ( is_active_sidebar( 'home-featured-full' ) || is_active_sidebar( 'home-featured-left' ) || is_active_sidebar( 'home-featured-right' ) ) {
 
-		echo '<div id="home-featured" class="clearfix"><div class="wrap">';
+		echo '<section id="home-featured" class="clearfix"><div class="wrap">';
 		
 			genesis_widget_area( 'home-featured-full', array(
-				'before' => '<div class="home-featured-full">',
+				'before' => '<main class="home-featured-full">',
+				'after' => '</main>',
+
 			) );
 			
-		echo '<div id="home-featured-halves">';
+		echo '<section id="home-featured-halves">';
 			
 			genesis_widget_area( 'home-featured-left', array(
-				'before' => '<div class="home-featured-left one-half first">',
+				'before' => '<aside class="home-featured-left one-half first">',
+				'after' => '</aside>',
 			) );
 			
 			genesis_widget_area( 'home-featured-right', array(
-				'before' => '<div class="home-featured-right one half">',
+				'before' => '<aside class="home-featured-right one half">',
+				'after' => '</aside>',
 			) );
 
-		echo '</div><!-- end home-featured-halves --></div><!-- end wrap --></div><!-- end home-featured -->'."\n";
+		echo '</section><!-- end home-featured-halves --></div><!-- end wrap --></section><!-- end home-featured -->'."\n";
 	}	
 }
 
@@ -47,20 +51,24 @@ function gregr_home_do_middle() {
 
 	if ( is_active_sidebar( 'home-middle-1' ) || is_active_sidebar( 'home-middle-2' ) || is_active_sidebar( 'home-middle-3' )  ) {								
 		
-		echo '<div id="home-middle" class="clearfix"><div class="wrap">';
+		echo '<section id="home-middle" class="clearfix"><div class="wrap">';
 		
 			genesis_widget_area( 'home-middle-1', array(
-				'before' => '<div class="home-middle-1 widget-area">',
+				'before' => '<aside class="home-middle-1 widget-area">',
+				'after' => '</aside>',
 			) );
 			
 			genesis_widget_area( 'home-middle-2', array(
-				'before' => '<div class="home-middle-2 widget-area">',
+				'before' => '<aside class="home-middle-2 widget-area">',
+				'after' => '</aside>',
 			) );
 			genesis_widget_area( 'home-middle-3', array(
-				'before' => '<div class="home-middle-3 widget-area">',
+				'before' => '<aside class="home-middle-3 widget-area">',
+				'after' => '</aside>',
+
 			) );									
 		
-		echo '</div><!-- end wrap --></div><!-- end home-middle -->'."\n";			
+		echo '</div><!-- end wrap --></section><!-- end home-middle -->'."\n";			
 	}		
 }
 
@@ -73,13 +81,13 @@ function gregr_home_do_bottom() {
 
 	if ( is_active_sidebar( 'home-bottom' ) ) {								
 	
-		echo '<div id="home-bottom" class="clearfix"><div class="wrap">';
+		echo '<section id="home-bottom" class="clearfix"><div class="wrap">';
 		
 			genesis_widget_area( 'home-bottom', array(
-				'before' => '<div class="home-bottom">',
+				'before' => '<aside class="home-bottom">',
 			) );
 		
-		echo '</div><!-- end .wrap --></div><!-- end #home-bottom -->'."\n";
+		echo '</div><!-- end .wrap --></section><!-- end #home-bottom -->'."\n";
 	}
 }
 
