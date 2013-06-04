@@ -54,6 +54,7 @@ remove_action( 'wp_head', 'wp_generator' );
 add_action( 'genesis_meta', 'gregr_viewport_meta_tag' );
 
 //* Add viewport meta tag for mobile browsers GENESIS 2.0 FEATURE
+// Disable the action above if you want to use what Genesis adds for viewport. Use one or the other
 //add_theme_support( 'genesis-responsive-viewport' );
 
 // Change favicon location 
@@ -78,6 +79,11 @@ add_theme_support( 'genesis-html5' );
 /** Add support for structural wraps */
 add_theme_support( 'genesis-structural-wraps', array( 'header', 'nav', 'subnav', 'inner', 'footer-widgets', 'footer' ) );
 
+// Adds custom microdata depending on post type - can me modified in gregr_child_functions file
+// KEEP DISABLED UNLESS YOU DO SOMETHING IN "gregr_child_functions.php" FILE
+// add_filter( 'genesis_attr_entry', 'gregr_custom_entry_attributes', 20 );
+
+
 // Reposition nav menus
 //remove_action('genesis_after_header','genesis_do_nav');
 //remove_action('genesis_after_header','genesis_do_subnav');
@@ -96,8 +102,8 @@ add_theme_support( 'genesis-structural-wraps', array( 'header', 'nav', 'subnav',
 //add_action( 'genesis_site_title', 'gregr_custom_seo_site_title' );
 
 // Remove and/or add custom post title
-//remove_action('genesis_post_title','genesis_do_post_title');
-//add_action('genesis_post_title','gregr_do_custom_post_title');
+//remove_action('genesis_entry_header','genesis_do_post_title');
+//add_action('genesis_entry_header','gregr_do_custom_post_title');
 
 // Remove and/or add custom site description
 //remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
@@ -105,7 +111,7 @@ add_theme_support( 'genesis-structural-wraps', array( 'header', 'nav', 'subnav',
 
 // Reposition breadcrumbs
 //remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
-//add_action( 'genesis_after_post_title', 'genesis_do_breadcrumbs' );
+//add_action( 'genesis_entry_header', 'genesis_do_breadcrumbs' );
 
 
 /***** FOOTER *****/

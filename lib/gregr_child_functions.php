@@ -15,15 +15,12 @@ function gregr_favicon_filter( $favicon_url ) {
 
 // Add scripts & styles
 function gregr_load_custom_scripts() {
-	  //wp_deregister_script( 'superfish' );
-	  //wp_deregister_script( 'superfish-args' );
-	  wp_register_script( 'html5', CHILD_URL . '/js/html5.js', array(), '3.6', false );
 	  wp_register_script( 'theme', CHILD_URL . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 
 	  wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lora|Open+Sans+Condensed:300\" rel="stylesheet" type="text/css">' );
 	  wp_register_style( 'theme-ie-only', CHILD_URL . '/css/child-style-ie.css' );
 	 
-	  wp_enqueue_script(array('html5','theme' ));
+	  wp_enqueue_script(array('theme' ));
 	  wp_enqueue_style(array( 'google-fonts', 'theme-ie-only' ));
 }
 
@@ -36,7 +33,7 @@ function gregr_ie_conditional( $tag, $handle ) {
 
 // Remove version number from css and js
 function _remove_script_version( $src ){
-    if ( preg_match("(\?ver=)", $src )){
+    if (preg_match("(\?ver=)", $src )){
 	$parts = explode( '?', $src );
 	return $parts[0];
 	}else{
@@ -79,6 +76,16 @@ function gregr_do_custom_post_title() {
 // Below is the default markup
 function gregr_custom_seo_site_description() {
 	echo '<p class="site-description">'.get_bloginfo('description').'</p>';
+}
+
+
+// Adds custom microdata depending on post type - can me modified
+// Props Nathan Rice
+function gregr_custom_entry_attributes( $attributes ) {
+    if( 'products' != get_post_type() )
+        return $attributes;
+    $attributes['itemtype']  = 'http://schema.org/Product';
+    return $attributes;
 }
 
 // Remove Genesis widgets
