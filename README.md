@@ -5,7 +5,7 @@ Author: <a href="http://www.gregreindel.com">Greg Reindel</a>
 
 Current Version: 1.0
 
-Requires: Wordpress 3.5+ and Genesis 1.9+
+Requires: Wordpress 3.5+ and Genesis 2.0-beta
 
 My HTML5 starter theme for Genesis Famework.
 
