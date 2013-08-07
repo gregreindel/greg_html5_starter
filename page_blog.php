@@ -1,6 +1,7 @@
 <?php // Template Name: Blog
 
-// Remove the post info function
+
+// Remove the post meta function 
 //remove_action( 'genesis_entry_header', 'genesis_post_info' );
 
 /** Customize the post info function */

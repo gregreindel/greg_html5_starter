@@ -27,7 +27,7 @@ include_once( get_stylesheet_directory() . '/lib/admin_functions.php' );
 //include_once( get_stylesheet_directory() . '/lib/custom_metabox.php' );
 
 // Add additional theme options
-//include_once( get_stylesheet_directory() . '/lib/custom_theme_options.php' );
+include_once( get_stylesheet_directory() . '/lib/custom_theme_options.php' );
 
 
 /***** CLEAN UP THE <HEAD> *****/
@@ -74,7 +74,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 /***** STRUCTURE & REPOSITIONING *****/
 
 // Add HTML5 functions
-add_theme_support( 'genesis-html5' );
+add_theme_support( 'html5' );
 
 /** Add support for structural wraps */
 add_theme_support( 'genesis-structural-wraps', array( 'header', 'nav', 'subnav', 'inner', 'footer-widgets', 'footer' ) );
@@ -198,6 +198,8 @@ genesis_register_sidebar( array(
 /***** OTHER *****/
 
 add_filter( 'http_request_args', 'gregr_prevent_theme_update', 5, 2 );
+
+//add_image_size( 'custom-thumb', 220, 180 ); 
 
 // Below is the closing bracket of theme setup. It's kinda important. 
 } // <-- DO NOT REMOVE THIS

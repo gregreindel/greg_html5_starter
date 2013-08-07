@@ -1,0 +1,11 @@
+#adminmenu .menu-icon-posttype div.wp-menu-image { 
+	background-image:url("images/gr-admin-menu-icons.png");
+	background-position:-78px 5px;
+	background-repeat:no-repeat;
+	background-size: 100px 16px;
+	}
+
+#adminmenu .menu-icon-posttype:hover div.wp-menu-image,
+#adminmenu .menu-icon-posttype.wp-has-current-submenu div.wp-menu-image{
+	background-position:-53px 5px;
+}

@@ -7,14 +7,14 @@ add_filter( 'admin_footer_text', create_function( '$a', 'return \'<span id="foot
 
 // enqueue genesis admin styles
 function genesis_child_load_admin_styles() {
-	wp_enqueue_style( 'child_admin_css', CHILD_URL . '/lib/css/admin.css', array());
+	wp_enqueue_style( 'child_admin_css', CHILD_URL . '/lib/admin/css/admin.css', array());
 } 
 
 // Remove menu items
-add_action( 'admin_menu', 'gregr_remove_admin_menus' );
+//add_action( 'admin_menu', 'gregr_remove_admin_menus' );
 function gregr_remove_admin_menus () {
 	global $menu;
-	$restricted = array(__('Links'),/* __('Tools') , __('Users'), __('Comments'),__('Posts') */ );
+	$restricted = array(/*__('Links'), __('Tools') , __('Users'), __('Comments'),__('Posts') */ );
 	end ($menu);
 	while (prev($menu)){
 		$value = explode(' ',$menu[key($menu)][0]);
