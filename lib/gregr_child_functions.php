@@ -16,7 +16,7 @@ function gregr_favicon_filter( $favicon_url ) {
 // Add scripts & styles
 function gregr_load_custom_scripts() {
 	  wp_register_script( 'theme', CHILD_URL . '/js/scripts.js', array( 'jquery' ), '1.0', true );
-	  wp_register_style( 'google-fonts', 'http:////netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' );
+	  wp_register_style( 'google-fonts', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' );
 	  wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lora|Open+Sans+Condensed:300\" rel="stylesheet" type="text/css">' );
 	  wp_register_style( 'theme-ie-only', CHILD_URL . '/css/child-style-ie.css' );
 	 
